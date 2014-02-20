@@ -8,6 +8,7 @@ Control a Gameboy emulator via IRC/TwitchTV.
 * !a
 * !b
 * !start
+* !select
 * !up
 * !down
 * !left
