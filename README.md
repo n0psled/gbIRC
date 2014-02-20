@@ -18,4 +18,4 @@ Control a Gameboy emulator via IRC/TwitchTV.
 * !RESTART
 
 
-You can get your TwitchTV oauth password [here](www.twitchapps.com/tmi)
+You can get your TwitchTV oauth password [here](http://www.twitchapps.com/tmi)
