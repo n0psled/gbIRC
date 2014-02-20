@@ -1,7 +1,7 @@
 gbIRC
 =====
 
-Control a Gameboy emulator via IRC/TwitchTV.
+Control a Gameboy emulator via IRC/TwitchTV. Inspired by TwitchPlaysPokemon.
 
 
 ####Commands:
