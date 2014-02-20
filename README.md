@@ -4,7 +4,7 @@ gbIRC
 Control a Gameboy emulator via IRC/TwitchTV.
 
 
-##Commands:
+###Commands:
 * !a
 * !b
 * !start
