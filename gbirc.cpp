@@ -42,7 +42,7 @@ string PART;
 string PASS = "PASS oauth:your_oauth_password_here \n";
 string nick = "your_nick_here";
 string chan = "your_chan_here";
-string JOIN = "JOIN " + chan + "\r\n";
+string JOIN;
 
 bool ircConnect();
 bool ircQuit();
@@ -289,6 +289,29 @@ void ircMsgHandler()
         
         SendInput(1, &ip, sizeof(INPUT));
         PRIVMSG = "PRIVMSG " + chan + " :Right\n";
+        ircSend(PRIVMSG.c_str());
+    }
+    
+    if(ircBuffer.find(":!select") != string::npos) {
+        SetForegroundWindow(GBCEmulator);
+        INPUT ip;
+        Sleep(3000);
+        ip.type = INPUT_KEYBOARD;
+        ip.ki.time = 0;
+        ip.ki.wVk = 0; 
+        ip.ki.dwExtraInfo = 0;
+
+        
+        ip.ki.dwFlags = KEYEVENTF_SCANCODE;
+        ip.ki.wScan = 0x18;  //O
+
+
+        SendInput(1, &ip, sizeof(INPUT));
+        Sleep(250);
+        ip.ki.dwFlags = KEYEVENTF_SCANCODE | KEYEVENTF_KEYUP;
+        
+        SendInput(1, &ip, sizeof(INPUT));
+        PRIVMSG = "PRIVMSG " + chan + " :Select\n";
         ircSend(PRIVMSG.c_str());
     }
 
