@@ -54,7 +54,6 @@ HWND GBCEmulator = FindWindow("PLAYGUY",0);
 bool ircConnect ()
 {
 
-
     WSADATA wsa_data;
     WSAStartup(MAKEWORD(2, 0), &wsa_data);
 
@@ -314,8 +313,6 @@ void ircMsgHandler()
         PRIVMSG = "PRIVMSG " + chan + " :Select\n";
         ircSend(PRIVMSG.c_str());
     }
-
-
 
 
 }
