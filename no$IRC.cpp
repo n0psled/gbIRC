@@ -42,9 +42,9 @@ string PRIVMSG;
 string USER;
 string NICK;
 string PART;
-string PASS = "PASS oauth:ek3a7v2fi3is61g9ij85pa6hwsffk3h \n";
-string nick = "n0n0n0n0n0";
-string chan = "#n0n0n0n0n0";
+string PASS = "PASS oauth:oauthpasshere \n";
+string nick = "nick";
+string chan = "#nick";
 string JOIN;
 
 bool ircConnect();
